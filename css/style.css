@@ -1,0 +1,267 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --cinza: #5e5b5bad;
+    --preto: #333;
+    --cinza-escuro: #212121;
+    --branco: #f5f5f5;
+    --azul-claro: #d8e3ec;
+    --azul-claro-2: #96d9d6;
+    --roxo-botao: #6c79db;
+    --cinza-escuro-2: #a8a8a8;
+
+    /* cores dos tipos dos pokemons */
+    --bug: #a6b91a;
+    --dark: #725847;
+    --dragon: #6f38f6;
+    --electric: #f7cf2e;
+    --fairy: #f9aec7;
+    --fighting: #bf3029;
+    --fire: #ee8130;
+    --flying: #a98ff0;
+    --ghost: #6e5896;
+    --grass: #7ac74c;
+    --ground: #dfbf69;
+    --ice: #98d5d7;
+    --normal: #a6a877;
+    --poison: #df67ddfb;
+    --psychic: #f65687;
+    --rock: #b8a137;
+    --steel: #b9b7cf;
+    --water: #6390f0;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Geral */
+body {
+    max-width: 128rem;
+    margin: 0 auto;
+    background-color: var(--cinza);
+    color: var(--preto);
+}
+
+body.modo-escuro {
+    background-color: var(--cinza-escuro);
+    color: var(--branco);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem;
+}
+
+header .logo,
+header .imagem-botao {
+    width: 3rem;
+    transition: 0.2s ease-in-out;
+}
+
+header #botao-alterar-tema {
+    background: none;
+    border: none;
+}
+
+header .logo:hover,
+header .imagem-botao:hover,
+main .cartao-pokemon:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Main */
+main {
+    padding: 2.5rem;
+}
+
+main .listagem-pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+main .cartao-pokemon {
+    background-color: var(--azul-claro);
+    width: 20rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 1.5rem;
+    transition: 0.2s ease-in-out;
+}
+
+main .cartao-pokemon:hover {
+    background-color: var(--azul-claro-2);
+}
+
+.modo-escuro .cartao-pokemon {
+    background-color: var(--cinza-escuro-2);
+}
+
+main .cartao-pokemon .informacoes {
+    display: flex;
+    justify-content: space-between;
+    border: .1rem solid var(--preto);
+    border-radius: 1rem;
+}
+
+main .cartao-pokemon .informacoes span {
+    padding: .5rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+main .cartao-pokemon .gif {
+    width: 9rem;
+    height: 9rem;
+}
+
+main .cartao-pokemon .tipos {
+    display: flex;
+    gap: 1.5rem;
+}
+
+main .cartao-pokemon .tipo {
+    padding: .8rem;
+    border-radius: 1rem;
+}
+
+main .descricao {
+    max-height: 8rem;
+    overflow-y: scroll;
+    font-size: 1.2rem;
+    padding-right: 1rem;
+}
+
+
+/* Tipos dos Pokemons */
+.grass {
+    background-color: var(--grass);
+}
+
+.poison {
+    background-color: var(--poison);
+}
+
+.fire {
+    background-color: var(--fire);
+}
+
+.water {
+    background-color: var(--water);
+}
+
+.bug {
+    background-color: var(--bug);
+}
+
+.flying {
+    background-color: var(--flying);
+}
+
+.normal {
+    background-color: var(--normal);
+}
+
+
+.electric {
+    background-color: var(--electric);
+}
+
+.ice {
+    background-color: var(--ice);
+}
+
+.ground {
+    background-color: var(--ground);
+}
+
+.fighting {
+    background-color: var(--fighting);
+}
+
+.psychic {
+    background-color: var(--psychic);
+}
+
+.dark {
+    background-color: var(--dark);
+}
+
+.rock {
+    background-color: var(--rock);
+}
+
+
+.ghost {
+    background-color: var(--ghost);
+}
+
+.steel {
+    background-color: var(--steel);
+}
+
+.dragon {
+    background-color: var(--dragon);
+}
+
+.fairy {
+    background-color: var(--fairy);
+}
+
+/* Scroll Bar */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #f1e9e9;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #582965;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+/* Botão Carregar Mais */
+.paginacao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.paginacao button {
+    padding: .5rem .5rem;
+    margin: .5rem 0;
+    background-color: var(--roxo-botao);
+    border: none;
+    border-radius: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
